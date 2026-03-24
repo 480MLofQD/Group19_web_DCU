@@ -5,20 +5,35 @@
     list-style: none;
     scroll-behavior: smooth;
 }
-
+html, body {
+  overflow-x: hidden; /* prevent horizontal scrolling */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 header {
     width: 100vw;
 }
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: clamp(15px, 2vw, 20px); /**Will change this later**/
-    overflow: hidden;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(20px, 0.1vw, 30px); /**Will change this later**/
 }
-.page-1 {
+section {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(20px, 0.1vw, 30px); /**Will change this later**/
+    overflow: hidden;
     height: 100vh;
     width: 100vw;
-    background-image: url("https://cdn.pixabay.com/photo/2024/02/09/17/35/online-8563507_1280.png"); /**Will change this later**/
+}
+.page-1 {
     background-size: cover;
+    background: linear-gradient(135deg, #f8fafc, #eef2ff);
+}
+.intro{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 .nav-bar {
     padding: 25px;
@@ -30,9 +45,37 @@ body {
     align-items: center;
     overflow: hidden;
 }
+.cta {
+  margin-top: 50px;
+  padding: 12px 24px;
+  background-color: #3b82f6; 
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
 
+.cta:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 3px solid transparent; 
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: black;
+  transform: translateY(-2px);
+}
 .nav-bar a{
     color: black;
+    font-size: 1em;
+    font-weight: bold;
 }
 .nav-bar .logo{
     font-size: 2em;
@@ -45,6 +88,7 @@ body {
 
 .nav-bar .list ul li{
     margin:0px 30px;
+    animation: FadeIn 0.6s ease forwards;
 }
 .nav-bar .menu{
     display: none;
@@ -52,11 +96,39 @@ body {
     top: 10px;
     right: 30px;
 }
-
-@media screen and (max-width: 815px){
+.title, .subtitle, .cta {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  
+}
+.cta{
+    animation-delay: 2s;
+}
+.title{
+    animation-delay: 0.5s;
+    margin-top: 250px;
+}
+.subtitle {
+  animation-delay: 1s;
+  margin-top: 10px;
+}
+.new_logo {
+  width: 120px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: popIn 0.6s ease forwards;
+  animation-delay: 1s;
+}
+@media screen and (max-width: 1276px){
   .nav-bar{
     padding: 0;
   }
+
+  .title .subtitle{
+    animation-delay: 1s;
+    margin-top: 250px;
+    position: absolute;
+}
   .nav-bar .menu{
     display: block;
   }
@@ -93,4 +165,22 @@ body {
     top: 10px;
     left: 50px;
   }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
 }
