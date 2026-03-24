@@ -7,17 +7,32 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-   <header>
+   
     <nav class="nav-bar">
-        <a href="#">Home</a><!--Could replace the Home with the logo of OperO-->
-        <ul><!--Link to each different sections-->
-            <li><a href="#">About OperO </a></li>
-            <li><a href="#">Market & Customer analysis</a></li>
-            <li><a href="#">Business & Finicial analysis</a></li>
-            <li><a href="#">About team</a></li>
-            <li><a href="#">Contact </a></li>
-        </ul>
+     <a href="#" class="logo"><img src="">OperO</a><!--Could replace the Home with the logo of OperO-->
+        <div class="list">
+         <ul><!--Link to each different sections-->
+            <li><a href="#">Greg</a></li>
+            <li><a href="#">Darlington</a></li>
+            <li><a href="#">Stupid</a></li>
+            <li><a href="#">Over</a></li>
+            <li><a href="#">Done</a></li>
+         </ul>
+        </div>
+        <img src="images/burger.png" alt="A navigation burger menu" class="menu"  width ="35px;">
     </nav>
-   </header>
+    <section class="page-1"></section>
+   <section></section>
+   <section></section>
+   <section></section>
+   <section></section>
 </body>
+<script>
+        const menuHamburger = document.querySelector(".menu")
+        const navLinks = document.querySelector(".list")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+</script>
 </html>
