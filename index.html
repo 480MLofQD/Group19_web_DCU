@@ -9,7 +9,7 @@
 <body>
    
     <nav class="nav-bar">
-     <a href="index.html" class="logo"><img src="" width="150px">OperO</a><!--Could replace the Home with the logo of OperO-->
+     <a href="index.html" class="logo"><img src="" width="150px">OperO</a><!--Could replace OperO with the actual logo of OperO-->
         <div class="list">
          <ul><!--Link to each different sections-->
             <li><a href="#">About OperO</a></li>
@@ -48,14 +48,23 @@
         <div class="content">
             <h2>Why use OperO?</h2>
         </div>
-        <div class="icons-container">
-            <img src="images/google.png" class="icon icon1">
-            <img src="images/analytics.png" class="icon icon2">
-            <img src="images/cloud.png" class="icon icon3">
-            <img src="images/automation.png" class="icon icon4">
-         </div>
-
+        <div class="boxes">
+            <div class="box box1">
+               <p class="pete">Hello there</p> 
+            </div>
+            <div class="box box2">
+                <p class="pete">Welcome</p>
+            </div>
+            <div class="box box3">
+                <p class="pete">sleepy</p>
+            </div>
+            <div class="box box4">
+                <p class="pete">What?</p>
+            </div>
+        </div>
     </section>
+
+
 </body>
 <script>
         const menuHamburger = document.querySelector(".menu")
@@ -64,5 +73,20 @@
         menuHamburger.addEventListener('click',()=>{
         navLinks.classList.toggle('mobile-menu')
         })
+        const boxes = document.querySelector('.boxes');
+        const whySection = document.querySelector('.why');
+
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if(entry.isIntersecting){
+                boxes.classList.add('assemble');
+            } else {
+                boxes.classList.remove('assemble');
+            }
+        });
+        }, { threshold: 0.4 });
+
+        observer.observe(whySection);
+
 </script>
 </html>
