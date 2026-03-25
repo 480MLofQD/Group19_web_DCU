@@ -75,12 +75,31 @@
 
 </body>
 <script>
-        const menuHamburger = document.querySelector(".menu")
-        const navLinks = document.querySelector(".list")
- 
-        menuHamburger.addEventListener('click',()=>{
-        navLinks.classList.toggle('mobile-menu')
-        })
+       const menuHamburger = document.querySelector(".menu")
+       const navLinks = document.querySelector(".list")
+
+       const title = document.querySelector(".title")
+       const subtitle = document.querySelector(".subtitle")
+    const cta = document.querySelector(".cta")
+
+     menuHamburger.addEventListener('click', () => {
+
+       if(navLinks.classList.contains('mobile-menu')){
+          navLinks.classList.remove('mobile-menu')
+
+          title.style.display = "block"
+          subtitle.style.display = "block"
+          cta.style.display = "inline-block"
+
+    } else {
+        navLinks.classList.add('mobile-menu')
+
+        title.style.display = "none"
+        subtitle.style.display = "none"
+        cta.style.display = "none"
+    }
+
+})
         const boxes = document.querySelector('.boxes');
         const whySection = document.querySelector('.why');
 
