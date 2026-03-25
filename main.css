@@ -5,7 +5,7 @@
     list-style: none;
     scroll-behavior: smooth;
 }
-html, body {
+html, body, footer{
   overflow-x: hidden;
   width: 100%;
   margin: 0;
@@ -18,16 +18,27 @@ body {
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: clamp(20px, 0.1vw, 30px); /**Will change this later**/
 }
-section {
+section, footer {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: clamp(20px, 0.1vw, 30px); /**Will change this later**/
     overflow: hidden;
     height: 100vh;
     width: 100vw;
 }
-section {
+section{
     background-size: cover;
     background: linear-gradient(135deg, #f8fafc, #eef2ff);
+}
+footer{
+    background-size: cover;
+    background: linear-gradient(135deg, #121213, #0a0a0a);
+
+}
+.greg .darlington{
+    border-radius: 10px;
+    border: 50px solid transparent; 
+    border-color: white;
+
 }
 .intro{
     display: flex;
