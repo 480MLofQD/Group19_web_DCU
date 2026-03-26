@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OperO | Login</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <a href="index.html" class="logo">OperO</a>
+    <div class="list">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About OperO</a></li>
+        <li><a href="finance.html">Finance</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <img src="images/burger.png" alt="Navigation menu" class="menu" width="35" />
+  </nav>
+
+  <main class="login-page">
+    <section class="login-hero">
+      <div class="login-copy">
+        <p class="eyebrow">OPER O PLATFORM ACCESS</p>
+        <h1>Sign in to your campus workspace</h1>
+        <p class="login-subtext">
+          A centralised platform for communication, scheduling, finance,
+          and student-facing operations.
+        </p>
+      </div>
+
+      <div class="login-card">
+        <h2>Login</h2>
+        <form class="login-form">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+          <div class="login-options">
+            <label class="remember-me">
+              <input type="checkbox" />
+              Remember me
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="login-btn">Sign In</button>
+        </form>
+
+        <p class="login-footer-text">
+          Don’t have an account?
+          <a href="signup.html">Create one</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const menuHamburger = document.querySelector(".menu");
+    const navLinks = document.querySelector(".list");
+
+    if (menuHamburger && navLinks) {
+      menuHamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("mobile-menu");
+      });
+    }
+  </script>
+</body>
+</html>
