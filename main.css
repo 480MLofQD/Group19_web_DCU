@@ -123,21 +123,50 @@ nav a:hover {
     font-size: 2em;
     font-weight: bold;
     letter-spacing: 0.04em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    flex-shrink: 0;
 }
 
-.nav-bar .list ul{
+.nav-bar .list {
+    flex: 1 1 auto;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 0;
 }
 
-.nav-bar .list ul li{
-    margin:0px 30px;
+.nav-bar .list ul {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 8px;
+}
+
+.nav-bar .list ul li {
+    margin: 0;
+    flex-shrink: 0;
     animation: FadeIn 0.6s ease forwards;
 }
-.nav-bar .menu{
+
+.nav-bar .list a {
+    padding: 10px 12px;
+}
+
+.nav-bar .menu {
     display: none;
     position: absolute;
     top: 10px;
     right: 30px;
+    flex-shrink: 0;
+}
+
+@media screen and (min-width: 1277px) {
+    .nav-bar .list a {
+        white-space: nowrap;
+    }
 }
 .title, .subtitle, .cta {
   opacity: 0;
@@ -207,9 +236,11 @@ nav a:hover {
     margin-left: -100%;
     transition: margin-left 0.5s ease;
     z-index: 15;
+    pointer-events: none;
   }
-  .list.mobile-menu{
+  .list.mobile-menu {
     margin-left: 0;
+    pointer-events: auto;
   }
   .nav-bar .list a {
     color: white;
@@ -218,11 +249,13 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: nowrap;
+    gap: 25px 0;
   }
-  .nav-bar .list ul li{
-    margin:25px 0;
+  .nav-bar .list ul li {
+    margin: 0;
     font-size: 1.5em;
-}
+  }
   .nav-bar .logo {
     position: relative;
     top: auto;
