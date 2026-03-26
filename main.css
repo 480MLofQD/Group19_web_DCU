@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,15 +21,26 @@ header {
     width: 100vw;
 }
 body {
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: clamp(20px, 0.1vw, 30px); /**Will change this later**/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(16px, 1vw, 18px);
+    background: linear-gradient(135deg, #f8fafc, #eef2ff);
+    color: #111827;
 }
 section, footer {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: clamp(20px, 0.1vw, 30px); /**Will change this later**/
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
+    font-size: clamp(16px, 1vw, 18px);
+    width: 100%;
+    overflow-x: hidden;
+}
+section {
+    min-height: 100vh;
+    height: auto;
+    overflow-y: visible;
+}
+footer {
+    min-height: 180px;
+    height: auto;
+    overflow-y: visible;
 }
 section{
     background-size: cover;
@@ -34,31 +51,37 @@ footer{
     background: linear-gradient(135deg, #121213, #0a0a0a);
 
 }
-.greg .darlington{
+.greg,
+.darlington {
     border-radius: 10px;
-    border: 50px solid transparent; 
-    border-color: white;
-
 }
-.intro{
+.intro {
     display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
+}
+
+.page-1 .intro img {
+    max-width: min(500px, 100%);
+    height: auto;
 }
 .content{
     margin-top: 30px;
     margin-left: 30px;
 }
 .nav-bar {
-    padding: 25px;
+    padding: 20px 30px;
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
     display: flex;
     width: 100%;
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
+    overflow: visible;
 }
 .cta {
   margin-top: 50px;
@@ -92,9 +115,10 @@ nav a:hover {
     font-size: 1em;
     font-weight: bold;
 }
-.nav-bar .logo{
+.nav-bar .logo {
     font-size: 2em;
     font-weight: bold;
+    letter-spacing: 0.04em;
 }
 
 .nav-bar .list ul{
@@ -137,22 +161,38 @@ nav a:hover {
 .problem{
     background-color:white;
 }
-@media screen and (max-width: 1276px){
-  .nav-bar{
-    padding: 0;
+@media screen and (max-width: 1276px) {
+  .nav-bar {
+    padding: 18px 20px;
   }
 
-  .title .subtitle{
-    animation-delay: 1s;
-    margin-top: 250px;
-    position: absolute;
-}
-  .nav-bar .menu{
-    display: block;
+  .title,
+  .subtitle {
+    position: relative;
+    margin-top: 0;
   }
-  .list{
-    background-color: rgba(19, 18, 18, 0.5);
-    backdrop-filter: blur(8px);
+
+  .login-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .login-copy {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .login-subtext {
+    margin: 0 auto;
+  }
+  .nav-bar .menu {
+    display: block;
+    z-index: 21;
+  }
+  .list {
+    position: fixed;
+    background-color: rgba(19, 18, 18, 0.72);
+    backdrop-filter: blur(10px);
     top: 0;
     left: 0;
     width: 100%;
@@ -161,13 +201,14 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     margin-left: -100%;
-    transition: all 0.9s ease;
+    transition: margin-left 0.5s ease;
+    z-index: 15;
   }
   .list.mobile-menu{
     margin-left: 0;
   }
-  .nav-bar .list a{
-    color: white
+  .nav-bar .list a {
+    color: white;
   }
   .list ul {
     display: flex;
@@ -178,10 +219,11 @@ nav a:hover {
     margin:25px 0;
     font-size: 1.5em;
 }
-  .nav-bar .logo{
-    position: absolute;
-    top: 10px;
-    left: 50px;
+  .nav-bar .logo {
+    position: relative;
+    top: auto;
+    left: auto;
+    z-index: 21;
   }
 }
 
@@ -334,13 +376,14 @@ nav a:hover {
   border-collapse: collapse;
 }
 
-.finance-table th, .finance-table td {
+.finance-table th,
+.finance-table td {
   padding: 15px;
-  border-bottom: 1px solid #ffeaea;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .finance-table th {
-  background-color: #5fb673;
+  background-color: #2563eb;
   color: white;
 }
 
@@ -349,37 +392,7 @@ nav a:hover {
 }
 
 
-/* login page styling */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: clamp(16px, 1vw, 18px);
-  background: linear-gradient(135deg, #f8fafc, #eef2ff);
-  color: #111827;
-}
-
-section {
-  width: 100%;
-  min-height: 100vh;
-}
-
-footer {
-  width: 100%;
-  min-height: 180px;
-}
-
-.nav-bar {
-  padding: 20px 30px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 20;
-}
-
-.logo {
-  letter-spacing: 0.04em;
-}
-
-/*  Login page  */
+/* Login page */
 .login-page {
   min-height: 100vh;
   display: flex;
@@ -494,20 +507,21 @@ footer {
 
 .login-btn {
   margin-top: 6px;
-  padding: 14px 20px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border-radius: 8px;
+  background-color: #3b82f6;
   color: white;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
 .login-btn:hover {
+  background-color: #2563eb;
   transform: translateY(-2px);
-  box-shadow: 0 18px 30px rgba(37, 99, 235, 0.22);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.2);
 }
 
 .login-footer-text {
@@ -521,12 +535,7 @@ footer {
   font-weight: 700;
 }
 
-/*  Fixes for existing pages  */
-.greg,
-.darlington {
-  border-radius: 10px;
-}
-
+/* Shared layout helpers */
 .title,
 .subtitle {
   position: relative;
@@ -550,64 +559,6 @@ footer {
   background: white;
   border-radius: 14px;
   overflow: hidden;
-}
-
-@media screen and (max-width: 1276px) {
-  .title,
-  .subtitle {
-    position: relative;
-    margin-top: 0;
-  }
-
-  .login-hero {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .login-copy {
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .login-subtext {
-    margin: 0 auto;
-  }
-
-  .nav-bar {
-    padding: 18px 20px;
-  }
-
-  .list {
-    position: fixed;
-    background-color: rgba(19, 18, 18, 0.72);
-    backdrop-filter: blur(10px);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -100%;
-    transition: all 0.5s ease;
-    z-index: 15;
-  }
-
-  .list.mobile-menu {
-    margin-left: 0;
-  }
-
-  .nav-bar .menu {
-    display: block;
-    z-index: 21;
-  }
-
-  .nav-bar .logo {
-    position: relative;
-    top: auto;
-    left: auto;
-    z-index: 21;
-  }
 }
 
 @media screen and (max-width: 768px) {

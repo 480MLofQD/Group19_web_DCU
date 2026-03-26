@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>OperO | Home</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -17,6 +17,7 @@
             <li><a href="finance.html">Finance</a></li>
             <li><a href="#">Meet The Team</a></li>
             <li><a href="#">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
          </ul>
         </div>
         <img src="images/burger.png" alt="A navigation burger menu" class="menu"  width ="35px;">
@@ -73,47 +74,22 @@
     </footer>
 
 
-</body>
-<script>
-       const menuHamburger = document.querySelector(".menu")
-       const navLinks = document.querySelector(".list")
-
-       const title = document.querySelector(".title")
-       const subtitle = document.querySelector(".subtitle")
-    const cta = document.querySelector(".cta")
-
-     menuHamburger.addEventListener('click', () => {
-
-       if(navLinks.classList.contains('mobile-menu')){
-          navLinks.classList.remove('mobile-menu')
-
-          title.style.display = "block"
-          subtitle.style.display = "block"
-          cta.style.display = "inline-block"
-
-    } else {
-        navLinks.classList.add('mobile-menu')
-
-        title.style.display = "none"
-        subtitle.style.display = "none"
-        cta.style.display = "none"
-    }
-
-})
+    <script src="main.js"></script>
+    <script>
         const boxes = document.querySelector('.boxes');
         const whySection = document.querySelector('.why');
-
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if(entry.isIntersecting){
+        if (boxes && whySection) {
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
                 boxes.classList.add('assemble');
-            } else {
+              } else {
                 boxes.classList.remove('assemble');
-            }
-        });
-        }, { threshold: 0.4 });
-
-        observer.observe(whySection);
-
-</script>
+              }
+            });
+          }, { threshold: 0.4 });
+          observer.observe(whySection);
+        }
+    </script>
+</body>
 </html>
