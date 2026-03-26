@@ -97,6 +97,10 @@ footer{
   background-color: #2563eb;
   transform: translateY(-2px);
 }
+
+.intro .cta + .cta {
+  margin-top: 12px;
+}
 nav a {
   text-decoration: none;
   color: #333;
