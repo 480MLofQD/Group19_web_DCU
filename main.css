@@ -81,6 +81,7 @@ footer{
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
+    gap: 1.25rem;
     overflow: visible;
 }
 .cta {
@@ -125,8 +126,14 @@ nav a:hover {
     letter-spacing: 0.04em;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    line-height: 1;
     gap: 0.35em;
     flex-shrink: 0;
+    text-align: center;
+}
+.nav-bar .logo img[src=""] {
+    display: none;
 }
 
 .nav-bar .list {
@@ -142,7 +149,7 @@ nav a:hover {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-end;
-    gap: 0 8px;
+    gap: 0 1.25rem;
 }
 
 .nav-bar .list ul li {
@@ -152,7 +159,7 @@ nav a:hover {
 }
 
 .nav-bar .list a {
-    padding: 10px 12px;
+    padding: 10px 16px;
 }
 
 .nav-bar .menu {
