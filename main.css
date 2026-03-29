@@ -820,3 +820,38 @@ body.home footer p {
     align-items: flex-start;
   }
 }
+/* sign up page */
+.name-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 14px;
+}
+.field-group{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.signup-form input[type="text"],
+.signup-form input[type="text"] {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #cbd5e1;
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.signup-form input[type="text"]:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+  transform: translateY(-1px);
+}
+.caps-label {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e293b;
+}
