@@ -855,3 +855,75 @@ body.home footer p {
   font-weight: 700;
   color: #1e293b;
 }
+
+.page-2 .intro img {
+    max-width: min(400px, 100%);
+    height: auto;
+}
+.market {
+  background: #ffffff;
+  padding: 60px 20px;
+}
+
+.market h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.market-card {
+  text-align: center;
+  background: #f1f5f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.market-card:hover {
+  transform: translateY(-5px);
+}
+
+.market-card h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.market-card h3 {
+  margin-bottom: 10px;
+}
+
+.market-card ul li {
+  margin: 8px 0;
+}
+.market-table {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.market-table table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+.market-table th,
+.market-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.market-table th {
+  background-color: #2563eb;
+  color: white;
+}
+
+.market-table tr:hover {
+  background-color: #f1f5f9;
+}
