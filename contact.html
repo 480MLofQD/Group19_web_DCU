@@ -1,26 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OperO | contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OperO | Contact Us</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
- 
+   
     <nav class="nav-bar">
         <a href="index.html" class="logo">OperO</a>
         <div class="list">
             <ul>
-                <li><a href="#">About OperO</a></li>
+                <li><a href="index.html#about">About OperO</a></li>
                 <li><a href="market.html">Marketing</a></li>
                 <li><a href="finance.html">Finance</a></li>
-                <li><a href="#">Meet The Team</a></li>
+                <li><a href="team.html">Meet The Team</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="login.html">Login</a></li>
-				<li><a href="signup.html">SignUp</a></li>
+                <li><a href="signup.html">SignUp</a></li>
             </ul>
         </div>
-        <img src="images/burger.png" alt="A navigation burger menu" class="menu" width="35">
+        <img src="images/burger.png" alt="Menu" class="menu" width="35">
     </nav>
+
+    <div class="contact">
+        <h1>Get in Touch</h1>
+        <p style="font-size: 1.1rem; font-weight: normal; margin-top: 10px; color: #475569;">
+            Have questions about standardising your campus operations? We're here to help.
+        </p>
+    </div>
+
+    <section>
+        <div class="contact_details">
+            <div style="margin-bottom: 10px;">
+                <p>Location</p>
+                <span style="color: #64748b;">Dublin City University (DCU), Ireland</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <p>Project Lead Email</p>
+                <span style="color: #64748b;">peterson.erokpaedamwen-ebuwai2@mail.dcu.ie</span>
+            </div>
+            <div>
+                <p>Working Hours</p>
+                <span style="color: #64748b;">Mon - Fri: 9:00 AM - 5:00 PM</span>
+            </div>
+        </div>
+
+        <div class="message">
+            <h2 style="text-align: center; margin-bottom: 10px;">Send us a Message</h2>
+            <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+                <div>
+                    <label for="name" style="font-weight: 600; display: block; margin-bottom: 5px;">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div>
+                    <label for="email" style="font-weight: 600; display: block; margin-bottom: 5px;">University Email</label>
+                    <input type="email" id="email" name="email" placeholder="name@university.edu" required>
+                </div>
+
+                <div>
+                    <label for="subject" style="font-weight: 600; display: block; margin-bottom: 5px;">Subject</label>
+                    <select id="subject" name="subject" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+                        <option value="demo">Request a Demo</option>
+                        <option value="partnership">Partnership Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="msg" style="font-weight: 600; display: block; margin-bottom: 5px;">Message</label>
+                    <textarea id="msg" name="message" placeholder="How can we help your institution?"></textarea>
+                </div>
+
+                <button type="submit" style="background: #2563eb; color: white; border: none; cursor: pointer; font-weight: bold; transition: background 0.3s;">
+                    Submit Inquiry
+                </button>
+            </form>
+        </div>
+
+        <div class="contact_bottom">
+            <p style="font-size: 1.2rem;">Building the future of campus management.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer" style="text-align: center; padding: 40px; color: white;">
+            <p>&copy; 2026 OperO - Group 19 Project</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
