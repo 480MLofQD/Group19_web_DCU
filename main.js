@@ -7,3 +7,4 @@
     navLinks.classList.toggle("mobile-menu");
   });
 })();
+

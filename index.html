@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OperO | Home</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="homepage.css">
 </head>
 <body class="home">
-   
-    <nav class="nav-bar">
+        <nav class="nav-bar">
         <a href="index.html" class="logo"><img src="" width="150" alt="">OperO</a><!--Could replace OperO with the actual logo of OperO-->
         <div class="list">
             <ul><!--Link to each different sections-->
                 <li><a href="#">About OperO</a></li>
-                <li><a href="#">Marketing</a></li>
+                <li><a href="market.html">Marketing</a></li>
                 <li><a href="finance.html">Finance</a></li>
                 <li><a href="#">Meet The Team</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="login.html">Login</a></li>
             </ul>
         </div>
@@ -30,67 +29,83 @@
         <a href="login.html" class="cta">Log in</a>
       </div>
     </section>
-    <section class="problem">
-        <div class="content">
-             <h2>What problem does OperO solve?</h2>
-             <p>Our product solves the following problem:</p>
+    <section class="section1">
+        <div class="head">
+                        <img src="images/gear.png" class="autorotate" alt="Rotating Gear" style="height: 450px;">
+            <h1 class="autoShow">Data Silos</h1>
+            <p>
+             By centralizing data, improving data sharing, and reducing duplication
+             OperO enables a smooth and efficient data flow and management
+            </p>
         </div>
-        <div class="carousel">
-            <div class="group">
-             <div class="card">1</div>
-             <div class="card">2</div>
-             <div class="card">3</div>
-             <div class="card">1</div>
-             <div class="card">2</div>
-             <div class="card">3</div>
-            </div>
+        <div class="paragraph">
+            <h1>Fragmentated Systems</h1>
+            <p>When campus services are spread across disconnected
+                platforms, it leads to poor accessibility, data 
+                management, and inefficiency. However, Opero solves
+                this issue by:
+            </p>
+            <p>- Unifying services into a single platform.</p>
+            <p> - Simplifying access through centralized login.</p>
+            <p>- improving data flow</p>
+    <img src="images/silos.png" class="autorotate" alt="Rotating Gear" style="height: 450px;">
+    </section>
+<section class="section1">
+        <div class="head">
+            <img src="images/phon.png" class="autorotate" alt="Rotating Gear" style="height: 450px;">
+            <h1>
+                Learn more about OperO
+            </h1>
+        </div>
+        <div class="paragraph">
+            <h1>User Experience</h1>
+            <p>Both students and staff are forced to navigate through multiple
+                platforms with different interfaces and redudant logins.
+                Opero addresses this problem by:
+            </p>
+            <p>- Providing a single interface for all campus services.</p>
+            <p>- Creating a consistent and intuitive design across all modules.</p>
         </div>
     </section>
-    <section class="why">
-        <div class="content">
-            <h2>Why use OperO?</h2>
+    <section class="horizontal-scroll-track">
+  <div class="sticky-viewport">
+    <div class="horizontal-strip">
+      
+      <div class="slide">
+        <div class="head">
+            <h1>About Opero</h1>
+            <p> Opero is a modular cloud-based campus digital platform with pluggable 
+                modules designed to standardise and digitalise high-frequency universities operations.
+</p>
+            <a href="">Learn more</a> 
         </div>
-        <div class="boxes">
-            <div class="box box1">
-               <p class="pete">Hello there</p> 
-            </div>
-            <div class="box box2">
-                <p class="pete">Welcome</p>
-            </div>
-            <div class="box box3">
-                <p class="pete">sleepy</p>
-            </div>
-            <div class="box box4">
-                <p class="pete">What?</p>
-            </div>
+        <div class="paragraph">
+          <h1>Marketing</h1>
+          <p>According to business surveys, the global educational technology (edtech) market is expected to grow from $199.74 billion in 2025 
+            to $456.41 billion in 2030, with a compound annual growth rate of 17.9% (business research firm, 2024). This shows how important,
+            and fast the educational SaaS market is growing</p>
+          <a href="market.html">Learn more</a> 
         </div>
-    </section>
-    <footer>
-        <div class="greg">
-            <p>Hello world</p> 
-        </div>
-        <div class="darlington">
-            <p>Greg Darlington</p>
-        </div>
-    </footer>
+      </div>
 
+      <div class="slide">
+        <div class="head">
+           <h1>Finance</h1>
+          <p>The projected revenue and cost all depends on various critical points.
+          </p>
+          <a href="finance.html">Learn more</a>
+        </div>
+        <div class="paragraph">
+          <h1>The Team</h1>
+          <p></p>
+          <a href="">Meet the team.</a> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
 
-    <script src="main.js"></script>
-    <script>
-        const boxes = document.querySelector('.boxes');
-        const whySection = document.querySelector('.why');
-        if (boxes && whySection) {
-          const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                boxes.classList.add('assemble');
-              } else {
-                boxes.classList.remove('assemble');
-              }
-            });
-          }, { threshold: 0.4 });
-          observer.observe(whySection);
-        }
-    </script>
+</footer>
 </body>
 </html>
