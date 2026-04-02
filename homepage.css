@@ -677,3 +677,101 @@ footer{
   z-index: 2;
   margin-bottom: 40px;
 }
+
+/* Homepage (index): structure, overlap, and small-screen behaviour */
+body.home .page-1 .subtitle {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.home .section1 {
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
+body.home .section1 .head img,
+body.home .section1 .paragraph img {
+  max-width: min(100%, 420px);
+  height: auto;
+  object-fit: contain;
+  max-height: min(450px, 52vh);
+}
+
+@media screen and (max-width: 960px) {
+  body.home .section1 {
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  body.home .section1 .head,
+  body.home .section1 .paragraph {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 1.25rem 1rem;
+  }
+
+  body.home .section1 .head img,
+  body.home .section1 .paragraph img {
+    max-height: min(260px, 42vh);
+  }
+}
+
+/* Narrow screens: stack horizontal-strip panels instead of scroll-linked translate (avoids overflow) */
+@media screen and (max-width: 768px) {
+  .horizontal-scroll-track {
+    height: auto;
+    min-height: 0;
+  }
+
+  .sticky-viewport {
+    position: relative;
+    top: auto;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .horizontal-strip {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    height: auto;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .slide {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    flex-shrink: 0;
+    padding: 1.5rem 0 2rem;
+    box-sizing: border-box;
+  }
+
+  .slide .paragraph,
+  .slide .head {
+    width: min(400px, calc(100vw - 2rem));
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    margin: 0.75rem auto;
+    flex-shrink: 0;
+  }
+
+  .horizontal-strip p {
+    margin-bottom: 1.25rem;
+  }
+}
+
+body.home footer .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem 2.5rem;
+}
