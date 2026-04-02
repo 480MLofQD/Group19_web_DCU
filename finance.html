@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
-   
+<body class="finance-body">
+
     <nav class="nav-bar">
         <a href="index.html" class="logo">OperO</a>
         <div class="list">
@@ -24,94 +24,106 @@
         </div>
         <img src="images/burger.png" alt="A navigation burger menu" class="menu" width="35">
     </nav>
+
     <section class="page-1">
-      <div class="intro">
-       <h1 class="title">Finances</h1>
-       <p class="subtitle">A detailed look at the finances behind OperO’s operations.</p>
-       <img src="euro.png" alt="Money" width="500px" height="500px">
-      </div>
+        <div class="intro">
+            <h1 class="title">Financial overview</h1>
+            <p class="subtitle">Cost structure, revenue logic, and illustrative scaling for OperO as a modular, institution-facing campus operations platform.</p>
+            <img src="euro.png" alt="Financial overview" width="500" height="500">
+        </div>
     </section>
 
-<div class="finance-grid">
+    <div class="finance finance-page">
+        <p class="finance-lead">
+            The model assumes <strong>institutional buyers</strong> (universities), not individual students: revenue combines <strong>one-time setup</strong>, <strong>annual subscription</strong>, and <strong>optional module fees</strong>—a pattern typical of early-stage B2B SaaS for large organisations.
+        </p>
 
-  <div class="finance-card">
-    <h3>Startup Costs</h3>
-    <ul>
-      <li>Development: €60,000</li>
-      <li>Cloud Setup: €12,000</li>
-      <li>API Tools: €3,000</li>
-      <li>Apple Developer: €99</li>
-      <li>Google Play: €25</li>
-      <li><strong>Total: €75,124</strong></li>
-    </ul>
-  </div>
+        <div class="finance-grid">
+            <div class="finance-card">
+                <h3>Startup costs (one-time)</h3>
+                <p class="finance-card-note">Capital required to reach a deployable product and first paying institutions.</p>
+                <ul>
+                    <li>Product &amp; platform development: €60,000</li>
+                    <li>Cloud &amp; infrastructure setup: €12,000</li>
+                    <li>APIs &amp; integrations tooling: €3,000</li>
+                    <li>Mobile distribution (Apple Developer): €99</li>
+                    <li>Mobile distribution (Google Play): €25</li>
+                    <li><strong>Total: €75,124</strong></li>
+                </ul>
+            </div>
 
-  <div class="finance-card">
-    <h3>Operational Costs</h3>
-    <ul>
-      <li>Maintenance & Support: €5,000</li>
-      <li>Cloud Hosting: €1,000/month</li>
-      <li><strong>Total: €6,000/month</strong></li>
-    </ul>
-  </div>
+            <div class="finance-card">
+                <h3>Operating costs (run-rate)</h3>
+                <p class="finance-card-note">Monthly spend to maintain, host, and support the live platform.</p>
+                <ul>
+                    <li>Maintenance &amp; support: €5,000 / month</li>
+                    <li>Cloud hosting &amp; services: €1,000 / month</li>
+                    <li><strong>Indicative total: €6,000 / month</strong></li>
+                </ul>
+            </div>
 
-  <div class="finance-card">
-    <h3>Revenue Streams</h3>
-    <ul>
-      <li>Setup Fee: €20,000</li>
-      <li>Annual Subscription: €15,000</li>
-      <li>Extra Modules: €3,000</li>
-      <li><strong>Total per University: €38,000</strong></li>
-    </ul>
-  </div>
+            <div class="finance-card">
+                <h3>Revenue streams (per university)</h3>
+                <p class="finance-card-note">Blended contract value for onboarding one institution onto the core platform plus optional modules.</p>
+                <ul>
+                    <li>Implementation &amp; setup fee: €20,000</li>
+                    <li>Annual platform subscription: €15,000</li>
+                    <li>Additional modules (optional): €3,000</li>
+                    <li><strong>Illustrative total per institution: €38,000</strong></li>
+                </ul>
+            </div>
 
-  <div class="finance-card">
-    <h3>Projected Profit</h3>
-    <ul>
-      <li>3 Universities Revenue: €114,000</li>
-      <li>Startup Costs: €75,124</li>
-      <li><strong>Estimated Profit: €38,876</strong></li>
-    </ul>
-  </div>
+            <div class="finance-card">
+                <h3>Illustrative surplus (3 institutions)</h3>
+                <p class="finance-card-note">Simple check: cumulative contract value versus one-time startup spend (before ongoing opex detail).</p>
+                <ul>
+                    <li>Revenue (3 × illustrative contract mix): €114,000</li>
+                    <li>Less: startup costs (one-time): €75,124</li>
+                    <li><strong>Estimated surplus (pre-opex): €38,876</strong></li>
+                </ul>
+            </div>
+        </div>
 
-</div>
-<div class="finance-table">
-  <h2>Growth Projection First 3 Months</h2>
-
-  <div class="table-wrapper">
-    <table>
-      <thead>
-        <tr>
-          <th>Month</th>
-          <th>Universities</th>
-          <th>Revenue</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Month 1</td>
-          <td>1</td>
-          <td>€35,000</td>
-        </tr>
-        <tr>
-          <td>Month 2</td>
-          <td>2</td>
-          <td>€70,000</td>
-        </tr>
-        <tr>
-          <td>Month 3</td>
-          <td>3</td>
-          <td>€105,000</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-<footer>
-    <div class="footer">
-    <p>RyanFitzpatrick</p>
+        <div class="finance-table">
+            <h2>Short-term revenue ramp</h2>
+            <p class="finance-table-sub">Illustrative first-quarter trajectory: one additional university contract per month at the blended revenue assumption used above. Figures are presentation-scale projections, not audited forecasts.</p>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Period</th>
+                            <th>Active universities</th>
+                            <th>Cumulative revenue (illustrative)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Month 1</td>
+                            <td>1</td>
+                            <td>€35,000</td>
+                        </tr>
+                        <tr>
+                            <td>Month 2</td>
+                            <td>2</td>
+                            <td>€70,000</td>
+                        </tr>
+                        <tr>
+                            <td>Month 3</td>
+                            <td>3</td>
+                            <td>€105,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-</footer>
-<script src="main.js"></script>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2026 OperO &ndash; Group 19 Project</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
