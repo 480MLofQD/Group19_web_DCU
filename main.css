@@ -1135,6 +1135,15 @@ h1, p{
 }
 /*TEAM PAGE*/
 
+.team-page-lead {
+    max-width: 40rem;
+    margin: 1rem auto 0;
+    font-size: 0.98rem;
+    font-weight: 500;
+    line-height: 1.55;
+    color: #64748b;
+}
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1150,15 +1159,28 @@ h1, p{
     border-radius: 16px;
     border: 1px solid #e2e8f0;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
+.team-card--featured {
+    border: 2px solid #2563eb;
+    box-shadow: 0 14px 44px rgba(37, 99, 235, 0.14);
+}
+
 .team-card:hover {
     transform: translateY(-5px);
+}
+
+.team-card:not(.team-card--featured):hover {
     border-color: #2563eb;
+}
+
+.team-card--featured:hover {
+    border-color: #1d4ed8;
+    box-shadow: 0 18px 48px rgba(37, 99, 235, 0.18);
 }
 
 .team-card h3 {
