@@ -335,6 +335,10 @@ nav a:hover {
     margin-top: 0;
   }
 
+  .page-1 {
+    padding-top: 5.5rem;
+  }
+
   .login-hero {
     grid-template-columns: 1fr;
     gap: 28px;

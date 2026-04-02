@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<div class="opero-about">
 <head>
     <meta charset="UTF-8">
-    <title>About Opero</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OperO | About OperO</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
-<div class="opero-about">
-    <header>
-        <h1>Opero</h1>
-       <nav class="nav-bar">
+    <nav class="nav-bar">
         <a href="index.html" class="logo">OperO</a>
         <div class="list">
             <ul>
-                <li><a href="index.html#about">About OperO</a></li>
+                <li><a href="Oper0.html">About OperO</a></li>
                 <li><a href="market.html">Marketing</a></li>
                 <li><a href="finance.html">Finance</a></li>
                 <li><a href="team.html">Meet The Team</a></li>
@@ -24,55 +20,74 @@
                 <li><a href="signup.html">SignUp</a></li>
             </ul>
         </div>
-        <img src="images/burger.png" alt="Menu" class="menu" width="35">
+        <img src="images/burger.png" alt="A navigation burger menu" class="menu" width="35">
     </nav>
-    </header>
 
-    <section class="about-hero">
-        <h1>About Opero</h1>
-        <p>
-            Opero is a digital platform designed to simplify university life of students
-        </p>
-    </section>
-
-    <section class="about-block">
-    <h2>The main problems</h2>
-        <ul>
-            <li>Slow processes</li>
-            <li>Poor user experience</li>
-            <li>Bad navigation</li>
-        </ul>
-    </section>
-
-    <section class="about-block">
-        <h2>Our solution</h2>
-        <p>
-            Oper0 connects all university services into one system, improving efficiency and reducing workload
-        </p>
-    </section>
-    <section class="about-features">
-        <h2>Key Features</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>Modular System</h3>
-                <p>Flexible platform that adapts to different needs</p>
-            </div>
-
-            <div class="feature-card">
-                <h3>Cloud-Based</h3>
-                <p>Accessible anytime from anywhere</p>
-            </div>
-            <div class="feature-card">
-                <h3>User Friendly</h3>
-                <p>Simple and intuitive interface</p>
-            </div>
+    <section class="page-1">
+        <div class="intro">
+            <h1 class="title">About OperO</h1>
+            <p class="subtitle">A modular campus operations platform that standardises and digitises high-frequency university processes—one integrated experience for institutions, staff, and students.</p>
         </div>
     </section>
-<footer>
-    <footer class="about-footer">
-    <p>Ivan Remez</p>
+
+    <main class="about-page" id="about-main">
+        <section class="about-section" aria-labelledby="what-is-opero">
+            <h2 id="what-is-opero">What OperO is</h2>
+            <p>OperO is a cloud-based platform that brings routine campus work—administration, communication, scheduling, and student-facing services—into a single, coherent system. Instead of stitching together many tools, universities can deploy one foundation and add only the modules they need.</p>
+        </section>
+
+        <section class="about-section" aria-labelledby="problem">
+            <h2 id="problem">The problem it solves</h2>
+            <p>Most campuses run on a patchwork of legacy systems, departmental tools, and one-off apps. That fragmentation creates duplicate data entry, inconsistent experiences, and slow handoffs between teams.</p>
+            <ul class="about-list">
+                <li>Multiple logins and interfaces for students and staff</li>
+                <li>Data silos that block reporting and timely decisions</li>
+                <li>High cost and risk of maintaining many disconnected products</li>
+            </ul>
+        </section>
+
+        <section class="about-section" aria-labelledby="modular">
+            <h2 id="modular">How the modular system works</h2>
+            <p>OperO is built as a core platform with <strong>optional, pluggable modules</strong>. Each module covers a defined operational area—so institutions can start with a focused rollout and expand when ready. Shared identity, navigation, and data principles apply across every module, which keeps training and support manageable.</p>
+        </section>
+
+        <section class="about-section" aria-labelledby="difference">
+            <h2 id="difference">Why it differs from fragmented university stacks</h2>
+            <p>Traditional setups tie together many vendors and internal tools that were never designed to work as one. OperO inverts that model: <strong>one integrated platform</strong> with a consistent UX and a modular path to breadth—so growth does not mean more fragmentation.</p>
+        </section>
+
+        <section class="about-section about-section--value" aria-labelledby="value">
+            <h2 id="value">Value for universities and students</h2>
+            <div class="about-value-grid">
+                <div class="about-value-card">
+                    <h3>For universities</h3>
+                    <p>Clearer operations, less duplicate infrastructure, and a standardised way to digitise high-frequency processes—without forcing a single rigid product on every department.</p>
+                </div>
+                <div class="about-value-card">
+                    <h3>For students and staff</h3>
+                    <p>Fewer barriers to getting work done: familiar navigation, faster access to tasks and information, and a smoother day-to-day experience across campus services.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section about-cta" aria-labelledby="next-steps">
+            <h2 id="next-steps" class="about-cta__heading">Explore the project</h2>
+            <p class="about-cta__text">See market context and positioning, review financial planning, or meet the team behind OperO.</p>
+            <div class="about-cta__links">
+                <a href="market.html" class="cta">Market &amp; customers</a>
+                <a href="finance.html" class="cta">Finance</a>
+                <a href="team.html" class="cta">Meet the team</a>
+                <a href="contact.html" class="cta">Contact us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2026 OperO Project Group 19</p>
+        </div>
     </footer>
 
-</div>
+    <script src="main.js"></script>
 </body>
 </html>
